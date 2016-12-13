@@ -22,7 +22,7 @@ public class FixedAssetItem {
 	
 	private String qRUrl;
 	
-	private ExtendObject extend;
+	private ExtendObject[] extend;
 
 	public String getId() {
 		return id;
@@ -80,11 +80,11 @@ public class FixedAssetItem {
 		this.qRUrl = qRUrl;
 	}
 
-	public ExtendObject getExtend() {
+	public ExtendObject[] getExtend() {
 		return extend;
 	}
 
-	public void setExtend(ExtendObject extend) {
+	public void setExtend(ExtendObject[] extend) {
 		this.extend = extend;
 	}	
 

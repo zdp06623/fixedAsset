@@ -14,7 +14,7 @@ import com.varbest.fixedAsset.model.FixedAssetItem;
 @Repository
 public class FixedAssetItemDao extends BaseDao<FixedAssetItem> implements IFixedAssetItemDao {
 	public FixedAssetItem findOneByCode(String code) {
-		Query query = new Query(Criteria.where("Code").is(code));
+		Query query = new Query(Criteria.where("code").is(code));
 		return getMongoTemplate().findOne(query, FixedAssetItem.class);
 	}
 }

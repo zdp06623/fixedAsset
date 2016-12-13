@@ -8,7 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 * @version 创建时间：2016年12月7日 下午4:42:34 
 * 类说明 
 */
+@Document(collection = "User")
 public class User {
+	
+
+	@Id
+	private String id;
 	
 	private String userName;
 	
@@ -28,5 +33,13 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getid() {
+		return id;
+	}
+
+	public void set_id(String id) {
+		this.id = id;
 	}
 }

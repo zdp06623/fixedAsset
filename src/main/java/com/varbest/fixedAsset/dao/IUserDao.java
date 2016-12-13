@@ -1,5 +1,7 @@
 package com.varbest.fixedAsset.dao;
 
+import java.util.List;
+
 import com.varbest.fixedAsset.model.User;
 
 /** 

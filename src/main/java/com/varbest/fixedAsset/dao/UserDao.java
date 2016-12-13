@@ -1,5 +1,7 @@
 package com.varbest.fixedAsset.dao;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
