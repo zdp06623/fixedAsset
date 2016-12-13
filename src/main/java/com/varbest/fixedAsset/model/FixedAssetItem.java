@@ -72,11 +72,11 @@ public class FixedAssetItem {
 		this.imageUrl = imageUrl;
 	}
 
-	public String getqRUrl() {
+	public String getQRUrl() {
 		return qRUrl;
 	}
 
-	public void setqRUrl(String qRUrl) {
+	public void setQRUrl(String qRUrl) {
 		this.qRUrl = qRUrl;
 	}
 

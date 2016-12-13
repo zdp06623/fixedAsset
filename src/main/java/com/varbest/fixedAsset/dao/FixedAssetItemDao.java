@@ -1,5 +1,7 @@
 package com.varbest.fixedAsset.dao;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
@@ -16,5 +18,11 @@ public class FixedAssetItemDao extends BaseDao<FixedAssetItem> implements IFixed
 	public FixedAssetItem findOneByCode(String code) {
 		Query query = new Query(Criteria.where("code").is(code));
 		return getMongoTemplate().findOne(query, FixedAssetItem.class);
+	}
+
+	
+	public List<FixedAssetItem> findByCategoryId(String categoryId) {
+		Query query=new Query(Criteria.where("categoryId").is(categoryId));
+		return getMongoTemplate().find(query, FixedAssetItem.class);
 	}
 }
