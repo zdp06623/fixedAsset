@@ -5,8 +5,7 @@ import java.security.NoSuchAlgorithmException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,7 @@ import com.varbest.fixedAsset.util.Security;
 
 @Controller
 public class HelperController {
-	private static Log log = LogFactory.getLog(HelperController.class);
+	private static Logger log=Logger.getLogger(HelperController.class);
 
 	@RequestMapping("getCode.do")
 	public String getCode(String param, HttpServletRequest request, HttpServletResponse respone, ModelMap model) {

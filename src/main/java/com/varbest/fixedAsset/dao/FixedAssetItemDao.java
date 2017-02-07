@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
+import com.mongodb.WriteResult;
 import com.varbest.fixedAsset.model.FixedAssetItem;
 
 /** 
@@ -24,5 +25,16 @@ public class FixedAssetItemDao extends BaseDao<FixedAssetItem> implements IFixed
 	public List<FixedAssetItem> findByCategoryId(String categoryId) {
 		Query query=new Query(Criteria.where("categoryId").is(categoryId));
 		return getMongoTemplate().find(query, FixedAssetItem.class);
+	}
+
+
+	public boolean remove(String id) {
+		boolean result=false;
+		Query query=new Query(Criteria.where("_id").is(id));
+		WriteResult writeResult= getMongoTemplate().remove(query, FixedAssetItem.class);
+		if (writeResult!=null && writeResult.getN()>0) {
+			result=true;
+		}
+		return result;
 	}
 }

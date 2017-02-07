@@ -6,9 +6,9 @@ package com.varbest.fixedAsset.model;
 */
 public class NtspHeader {
 	
-	private Integer errCode;
+	private Integer errCode=0;
 	
-	private String errMsg;	
+	private String errMsg="";	
 	
 	public Integer getErrCode() {
 		return errCode;

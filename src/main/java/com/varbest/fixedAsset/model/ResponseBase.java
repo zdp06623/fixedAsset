@@ -7,7 +7,7 @@ package com.varbest.fixedAsset.model;
 public class ResponseBase {
 	private NtspHeader ntspHeader;
 
-	public NtspHeader getNtspHeader() {
+	public NtspHeader getNtspHeader() {		
 		return ntspHeader;
 	}
 

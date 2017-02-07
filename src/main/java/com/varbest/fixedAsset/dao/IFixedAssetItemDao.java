@@ -24,4 +24,6 @@ public interface IFixedAssetItemDao extends IBaseDao<FixedAssetItem> {
 	 */
 	public List<FixedAssetItem> findByCategoryId(String categoryId);
 	
+	
+	public boolean remove(String id);
 }
