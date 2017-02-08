@@ -3,11 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 		
-	 <!--由Spring载入的Log4j配置文件位置-->
+	<!-- Spring-mybatis的配置文件 -->  
+	<context-param>  
+	    <param-name>contextConfigLocation</param-name>  
+	    <param-value>/WEB-INF/spring-mybatis.xml</param-value>  
+	</context-param>  
+
+	<!--由Spring载入的Log4j配置文件位置-->
     <context-param>
        <param-name>log4jConfigLocation</param-name>
        <param-value>/WEB-INF/log4j.properties</param-value>
     </context-param>
+    
+    <listener>  
+    <description>spring监听器</description>  
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
+</listener>  
     
 	<servlet>
 		<servlet-name>spring</servlet-name>

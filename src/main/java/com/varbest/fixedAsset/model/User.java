@@ -1,18 +1,14 @@
 package com.varbest.fixedAsset.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /** 
 * @author zhangdp
 * @version 创建时间：2016年12月7日 下午4:42:34 
 * 类说明 
 */
-@Document(collection = "User")
 public class User {
 	
 
-	@Id
 	private String id;
 	
 	private String userName;

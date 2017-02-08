@@ -26,6 +26,6 @@ public class HelperController {
 			log.error("getCode error:{}", e);
 		}
 		model.put("sig", sig);
-		return "getCode";
+		return "getCode"; 
 	}
 }

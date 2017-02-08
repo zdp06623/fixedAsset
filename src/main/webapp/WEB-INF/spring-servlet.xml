@@ -26,6 +26,4 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-	<!-- 导入mongodb的配置文件 --> 
-	<import resource="mongodb-context.xml"/>
 </beans>
